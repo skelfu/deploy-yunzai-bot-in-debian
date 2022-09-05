@@ -168,7 +168,8 @@ git pull https://gitee.com/zolay-poi/achievements-plugin.git
 
 ----
 **For yunzaiV3**
-查委托.js
+查委托.js  
+存放位置：./plugins/chaweituo/查委托.js  
 内容：
 ```
 import plugin from '../../lib/plugins/plugin.js'
@@ -238,7 +239,8 @@ async task123321 (e) {
 ---- 
 
 **For YunzaiV2**
-查委托.js（文件名随意）
+查委托.js（文件名随意）  
+存放位置：./lib/app/查委托.js  
 内容：
 ```
 import { segment } from "oicq";
