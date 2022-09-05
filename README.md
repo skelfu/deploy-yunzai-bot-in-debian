@@ -115,7 +115,7 @@ Ctrl+C
 查委托：不知道地址，某群友给的
 
 ### 安装喵喵插件
-此时状态：**非root**
+此时状态：**非root**  
 **用户名@设备名：~$**
 ```
 cd Yunzai-Bot
@@ -123,7 +123,7 @@ git clone https://github.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugi
 ```
 
 ### 安装成就插件
-此时状态：**非root**
+此时状态：**非root**  
 **用户名@设备名：~$**
 ```
 cd Yunzai-Bot
@@ -160,10 +160,10 @@ git pull https://gitee.com/zolay-poi/achievements-plugin.git
 在bot目录下输入：
 `npm stop`
 ### 更新V2
-在bot目录下输入：
+在bot目录下输入：  
 `git pull https://github.com/yoimiya-kokomi/Yunzai-Bot.git`
 ### 更新V3
-在bot目录下输入：
+在bot目录下输入：  
 `git pull https://github.com/Le-niao/Yunzai-Bot.git main`
 
 ----
