@@ -110,9 +110,9 @@ Ctrl+C
 
 ## 添加插件
 ### 常用插件（反正我常用）
-喵喵插件地址：[Github](https://github.com/yoimiya-kokomi/miao-plugin),[Gitee](https://gitee.com/yoimiya-kokomi/miao-plugin)
-成就：[GitHub](https://github.com/zolay-poi/achievements-plugin),[Gitee](https://gitee.com/zolay-poi/achievements-plugin)
-查委托：不知道地址，某群友给的
+喵喵插件地址：[Github](https://github.com/yoimiya-kokomi/miao-plugin),[Gitee](https://gitee.com/yoimiya-kokomi/miao-plugin)  
+成就：[GitHub](https://github.com/zolay-poi/achievements-plugin),[Gitee](https://gitee.com/zolay-poi/achievements-plugin)  
+查委托：不知道地址，某群友发的，在最底下有
 
 ### 安装喵喵插件
 此时状态：**非root**  
