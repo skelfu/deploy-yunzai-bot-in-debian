@@ -1,4 +1,4 @@
-# 云崽bot安装方法：Debian
+# 云崽bot部署方法：Debian
 0、访问链接查看CentOs安装方法：[Linux环境搭建](https://github.com/Le-niao/Yunzai-Bot/issues/3)
 
 note：
