@@ -112,7 +112,7 @@ Ctrl+C
 ### 常用插件（反正我常用）
 喵喵插件地址：[Github](https://github.com/yoimiya-kokomi/miao-plugin),[Gitee](https://gitee.com/yoimiya-kokomi/miao-plugin)  
 成就：[GitHub](https://github.com/zolay-poi/achievements-plugin),[Gitee](https://gitee.com/zolay-poi/achievements-plugin)  
-查委托：不知道地址，某群友发的，在最底下有
+查委托：[Gitee](https://gitee.com/mofengdada/chaweituo)  
 
 ### 安装喵喵插件
 此时状态：**非root**  
@@ -165,123 +165,5 @@ git pull https://gitee.com/zolay-poi/achievements-plugin.git
 ### 更新V3
 在bot目录下输入：  
 `git pull https://github.com/Le-niao/Yunzai-Bot.git main`
-
-----
-**For yunzaiV3**
-查委托.js  
-存放位置：./plugins/chaweituo/查委托.js  
-内容：
-```
-import plugin from '../../lib/plugins/plugin.js'
-import fetch from 'node-fetch'
-
-export class assignment extends plugin {
-  constructor () {
-    super({
-      /** 功能名称 */
-      name: '查委托',
-      /** 功能描述 */
-      dsc: '查每日委托',
-      /** https://oicqjs.github.io/oicq/#events */
-      event: 'message',
-      /** 优先级，数字越小等级越高 */
-      priority: 500,
-      rule: [
-        {
-          /** 命令正则匹配 */
-          reg: '^#*查委托(.*)',
-          /** 执行方法 */
-          fnc: 'task123321'
-        }
-      ]
-    })
-  }
-  /****
-   * #task123321
-   * @param e oicq传递的事件参数e
-   */
-async task123321 (e) {
-    logger.info("TEST_LOG"+e.msg.replace(/#|＃|查委托/g, ""));
-    //
-    let url = "http://114.132.218.87:12583/api/genshin/task/" + e.msg.replace(/#|＃|查委托/g, ""); //接口地址
-    let response = await fetch(url); //调用接口获取数据
-    let data = await response.json();//结果json字符串转对象
-    let msg, name, code = response.status;
-    if (code == 201) //请求不成功
-    {
-        e.reply(data.msg);
-    }
-    else if (code == 200) 
-    {
-        if (data.hidden == true) 
-        {//判断是不是隐藏
-            name = "隐藏成就" + ('《' + data.name + '》\n')
-        } else {
-            name = "成就" + ('《' + data.name + '》\n')
-        }
-        msg = data.desc + "\n"
-        for (var key of data.involve) {
-            if (key.type == '世界任务') break;
-            msg += '每日委托' + ('《' + key.task + '》\n')
-        }
-        msg += "————\n" + data.msg + "\n————\n※ 文案: B站 oz水银"
-        logger.info('[查委托]\n'+name + msg);
-        e.reply(name + msg);
-    } 
-    else 
-    {
-        logger.error("[查委托]错误：\n"+data.msg);
-        e.reply("错误：\n"+data.msg);
-    }
-    }
-}
-```
----- 
-
-**For YunzaiV2**
-查委托.js（文件名随意）  
-存放位置：./lib/app/查委托.js  
-内容：
-```
-import { segment } from "oicq";
-import fetch from "node-fetch";
-
-//项目路径
-const _path = process.cwd();
-
-export const rule = {
-  task123321: {
-    reg: "^#*查委托(.*)", //匹配消息正则，命令正则
-    priority: 500, //优先级，越小优先度越高
-    describe: "查委托是否有成就，以及委托详细过程", //【命令】功能说明
-  },
-};
-
-export async function task123321(e) {
-
-  let url = "http://114.132.218.87:12583/api/genshin/task/" + e.msg.replace(/#|＃|查委托/g, ""); //接口地址
-  let response = await fetch(url); //调用接口获取数据
-  let data = await response.json();//结果json字符串转对象
-  let msg, name, code = response.status;
-  if (code != 200 && code != 201) return;//请求不成功
-  function requestOK() {
-    if (data.hidden == true) {//判断是不是隐藏
-      name = "隐藏成就" + ('《' + data.name + '》\n')
-    } else {
-      name = "成就" + ('《' + data.name + '》\n')
-    }
-    msg = data.desc + "\n"
-    for (var key of data.involve) {
-      if (key.type == '世界任务') break;
-      msg += '每日委托' + ('《' + key.task + '》\n')
-    }
-    msg += "————\n" + data.msg + "\n————\n※ 文案: B站 oz水银"
-    e.reply(name + msg);
-  };
-  if (code == 201) return e.reply(data.msg);
-  if (code == 200) return requestOK();
-  return true; 
-}
-```
 
 
