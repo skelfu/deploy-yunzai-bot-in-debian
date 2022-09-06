@@ -5,7 +5,7 @@ note：
 如果下载慢或者下载失败百度linux系统换软件的方法；
 
 ## 更新软件和确保sudo能用
-1、**root**权限下：
+**root**权限下：
 ```
 apt-get update
 apt-get upgrade
@@ -33,13 +33,13 @@ vi /etc/passwd
 在**root**下：  
 `curl -sL https://deb.nodesource.com/setup_16.x | bash - `
 
-### 安装nodejs
+### 2、安装nodejs
 `apt install nodejs`
 
-### 安装npm
+### 3、安装npm
 `apt install npm`
 
-### 检查版本
+### 4、检查版本
 ```
 node -v
 npm -v
@@ -116,7 +116,7 @@ Ctrl+C
 |成就|[GitHub](https://github.com/zolay-poi/achievements-plugin),[Gitee](https://gitee.com/zolay-poi/achievements-plugin)|
 |查委托|[Gitee](https://gitee.com/mofengdada/chaweituo)|  
 
-其他插件：  
+### 其他插件  
 [Yunzai-Bot插件目录](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)  
 
 ### 安装喵喵插件
