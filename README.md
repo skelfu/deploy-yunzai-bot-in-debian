@@ -115,6 +115,7 @@ Ctrl+C
 |喵喵插件|[Github](https://github.com/yoimiya-kokomi/miao-plugin),[Gitee](https://gitee.com/yoimiya-kokomi/miao-plugin)|  
 |成就|[GitHub](https://github.com/zolay-poi/achievements-plugin),[Gitee](https://gitee.com/zolay-poi/achievements-plugin)|
 |查委托|[Gitee](https://gitee.com/mofengdada/chaweituo)|  
+
 其他插件：  
 [Yunzai-Bot插件目录](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)  
 
